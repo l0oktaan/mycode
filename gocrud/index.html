@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+              <a href="#" class="btn btn-primary" id="callGo">readcard</a>
+              
+            </div>
+            <div class="modal-body">
+                
+                  <div class="row">
+                    <div class="col-sm-12">
+                        
+                        <form action="Insert" method="POST">                            
+                            <div class="form-group">    
+                                <div id="response"></div>              
+                              <label for="name" class="control-label">เลขบัตรประจำตัวประชาชน</label>                
+                              <div class="input-group col-sm-5">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="idcard" id="idcard"  placeholder="เลขบัตรประจำตัวประชาชน"/>
+                              </div>
+                            </div> <!-- form-group -->
+                            <div class="row">
+                              <div class="col-sm-4">
+                                  <div class="form-group">                  
+                                      <label for="prefix" class="control-label">คำนำหน้า</label>                
+                                      <div class="input-group col-sm-12">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <select class="form-control" id="prefix" name="prefix">
+                                            <option>นาย</option>
+                                            <option>นาง</option>
+                                            <option>นางสาว</option>
+                                        </select>                                
+                                      </div>
+                                      
+                                    </div> <!-- form-group -->
+                              </div>
+                              <div class="col-sm-8">
+                                  <div class="form-group">                  
+                                    <label for="fullname" class="control-label">ชื่อ - นามสกุล</label>                
+                                    <div class="input-group col-sm-12">
+                                      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                      <input type="text" class="form-control" name="fullname" id="fullname"  placeholder="ชื่อ - นามสกุล"/>
+                                    </div>
+                                  </div> <!-- form-group -->
+                              </div>
+                            </div>
+                            
+                            
+                            <div class="form-group">                  
+                              <label for="address" class="control-label">ที่อยู่</label>                
+                              <div class="input-group col-sm-12">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <textarea class="form-control" rows="2" name="address" id="address"  placeholder="ที่อยู่"></textarea>
+                              </div>
+                            </div> <!-- form-group -->
+                            
+                                         
+                        </form>
+                    </div>
+                  </div>
+                
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+      </div> <!-- Modal -->
+
+    <a type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-bordered">            
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range . }}
+              <tr>
+                <td>{{.No}}</td>
+                <td>{{.Fname}}</td>
+                <td>{{.Lname}}</td>
+                <td><a class="btn btn-danger btn-sm" href="/delete?no={{.No}}" onclick="return ConfirmDelete();">Delete</a></td> 
+              </tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+    function ConfirmDelete(){
+      return confirm("คุณต้องการลบข้อมูลใช่หรือไม่?");
+    }
+    document.getElementById("callGo").addEventListener("click", readCard);
+    function readCard(){
+      //alert("OK");
+      //e.preventDefault();
+      
+      $.ajax({
+        type: 'POST',
+        url: "/readcard",        
+        success: function(data) {
+          alert(data[0]["id"]);
+          $("#response").append(data.id);
+        },
+      });
+    }
+    function readCard1(){
+      $.getJSON("/readcard", function(result){
+        alert("ok");
+        $.each(result, function(i, field){
+            $("idcard").append(field);
+        });
+    });
+    }
+    /* $("#callGo").on('click', function() {
+      e.preventDefault();
+      alert("OK");
+      $.ajax({
+        url: "/readcard",
+        method: "GET",
+        success: function(data) {
+          alert("OK");
+          $("#response").html(data);
+        },
+      });
+    }); */
+			
+    
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/3.3/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>    
+</body>
+</html>

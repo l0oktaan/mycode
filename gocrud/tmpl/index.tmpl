@@ -1,0 +1,30 @@
+{{ define "Index"}}
+{{ template "Header" }}
+<div class="container">      
+    <div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered">            
+        <thead>
+            <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range . }}
+            <tr>
+            <td>{{.No}}</td>
+            <td>{{.Fname}}</td>
+            <td>{{.Lname}}</td>
+            <td><a class="btn btn-danger btn-sm" href="/delete?no={{.No}}" onclick="return ConfirmDelete();">Delete</a></td> 
+            </tr>
+            {{ end }}
+        </tbody>
+        </table>
+    </div>
+    </div>
+</div> <!-- /container -->
+{{ template "Footer"}}
+{{ end }}
